@@ -71,13 +71,15 @@ let para = document.createElement('p');
 
 // Change the inner text of para to "querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure."
 
-para.innerText = 'querySelector';
+para.innerText = 'querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure.';
 
 // Remove all the elements from box 1
 
-
+document.querySelector('.one').innerHTML = "";
 
 // Replace all the elements inside box 1 with the para (you created above)
+
+document.querySelector('.one').append(para);
 
 /* Walking the DOM
 Do the following after selecting box 16 and storing in variable named box16
@@ -189,7 +191,7 @@ btn.style.border = "1px solid black";
 
 // Add the padding of '0.5rem 1rem' to btn
 
-btn.style.padding = '0.5 em 1em';
+btn.style.padding = '0.5em 1em';
 
 // Append the btn in box number 9
 
@@ -206,6 +208,8 @@ let seven = document.querySelector('.seven');
 
 // Remove all the elements form box seven
 
+seven.innerHTML = ""
+
 // Append the imgElm to the box no 7
 
 seven.append(imgElm);
@@ -221,14 +225,28 @@ let five = document.querySelector('.five');
 
 // Create an input element
 
-
+let input = document.createElement('input');
 
 // Change the placeholder property of the input element to "Enter you email!"
 
+input.placeholder = "Enter your email";
+
 // Append the input element to the box 5 you selected above
+
+five.append(input);
 
 // Create two anchor (a) element with  the text of `AltCampus` and `Google`
 
+let AltCampus = document.createElement("a");
+AltCampus.innerText = "AltCampus";
+let Google = document.createElement("a");
+Google.innerText ="Google"
+
 // Change the href property of the anchor elements to `https://altcampus.school` and `https://google.com`
 
+AltCampus.setAttribute('href',"https://altcampus.school");
+Google.setAttribute('href',"https://google.com");
+
 // Append both the elements to box 5 you selected above.
+
+five.append(AltCampus,Google);
