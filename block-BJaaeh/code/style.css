@@ -1,0 +1,48 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-body {
+  margin: 50px 0;
+  border: 15px solid black;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.hour-hand {
+  border: 4px solid rgb(0, 0, 0);
+  width: 35%;
+  position: absolute;
+  right: 50%;
+  transform: rotate(0deg);
+  transform-origin: 100%;
+  border-radius: 80%;
+}
+
+.minute-hand {
+  border: 5px solid rgb(0, 0, 0);
+  width: 40%;
+  position: absolute;
+  right: 50%;
+  transform: rotate(180deg);
+  transform-origin: 100%;
+  border-radius: 50%;
+  transition: all 0.01s;
+  transition-timing-function: cubic-bezier(1, 1, 0, -0.03);
+}
+
+.second-hand {
+  border: 5px solid rgb(255, 0, 0);
+  width: 45%;
+  position: absolute;
+  right: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  border-radius: 50%;
+  transition: all 0.01s;
+  transition-timing-function: cubic-bezier(1, 1, 0, -0.03);
+}
