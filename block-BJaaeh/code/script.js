@@ -41,7 +41,6 @@ function tick() {
     hourHand.style.transition = `all 1s`;
     hourHand.style.transitionTimingFunction = `cubic-bezier(1, 1, 0, -0.03)`;
   }
-//   console.log(seconds,minutes,hour);
 }
 
 setInterval(tick, 1000);
